@@ -1,0 +1,191 @@
+/* 1. Basic Styles */
+body {
+    font-family: 'Kanit', 'Sarabun', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fcfcfc; /* พื้นหลังสีสว่างสบายตา */
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+/* 2. Header (ปรับเป็นสีเลือดหมู-ทอง) */
+header {
+    background: linear-gradient(135deg, #8B0000 0%, #a30000 100%); /* แดงเลือดหมูไล่เฉด */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 6px solid #D4AF37; /* เส้นขอบสีทอง */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header .logo img {
+    height: 100px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.3));
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+/* 3. Navigation (เมนูนำทาง) */
+nav {
+    background-color: #333;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #D4AF37; /* เปลี่ยนเป็นสีทองเวลาเม้าส์ชี้ */
+    color: #8B0000; /* ตัวหนังสือสีแดงเลือดหมู */
+}
+
+/* 4. Main Content Area */
+.content {
+    padding: 40px;
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    min-height: 500px;
+}
+
+.content h2 {
+    color: #8B0000;
+    text-align: center;
+    border-bottom: 3px solid #D4AF37;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+.content h3 {
+    color: #8B0000;
+    margin-top: 25px;
+    border-left: 5px solid #D4AF37;
+    padding-left: 15px;
+    text-align: left;
+}
+
+/* 5. Hero Section (หน้าหลัก) */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero .button {
+    display: inline-block;
+    background-color: #8B0000;
+    color: white;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.hero .button:hover {
+    background-color: #D4AF37;
+    color: #8B0000;
+    transform: scale(1.05);
+}
+
+/* 6. Grid Systems (ข่าว, สาขา, กิจกรรม, ผู้บริหาร) */
+.news-grid, .dept-grid, .gallery, .executive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.news-item, .dept-card, .gallery-item, .executive-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover, .dept-card:hover, .executive-card:hover {
+    transform: translateY(-8px);
+    border-color: #D4AF37;
+}
+
+/* ผู้บริหาร (Executive Specific) */
+.executive-card .executive-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #D4AF37;
+    margin-bottom: 15px;
+}
+
+.executive-card .quote {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* 7. Footer (ส่วนท้าย) */
+footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 4px solid #8B0000;
+}
+
+footer p { margin: 5px 0; }
+footer .social-links a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: bold;
+}
